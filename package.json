@@ -1,6 +1,6 @@
 {
   "name": "phase-eight",
-  "version": "0.1.0",
+  "version": "0.1.a",
   "private": true,
   "dependencies": {
     "react": "^16.8.6",
