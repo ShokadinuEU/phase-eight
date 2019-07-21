@@ -35,8 +35,8 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: '#8e7143',
     [theme.breakpoints.up('sm')]: {
       display: 'block',
-      fontSize: '0.9em',
-      fontWeight: '600',
+      fontSize: '0.83em',
+      fontWeight: '400',
       position: 'absolute',
       '& > img': {
         width: '15px',
@@ -53,7 +53,7 @@ const useStyles = makeStyles(theme => ({
       display: 'none'
     },
     [theme.breakpoints.down('sm')]: {
-      display: 'none'
+      display: 'block'
     },
   },
   title: {
@@ -96,8 +96,8 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'row-reverse',
     [theme.breakpoints.up('sm')]: {
-      width: '350px',
-      marginLeft: theme.spacing(20),
+      width: '390px',
+      marginLeft: theme.spacing(4),
       border: '1px solid #ccc',
       borderRadius: '2px',
     },
@@ -113,7 +113,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   searchIcon: {
-    width: theme.spacing(7),
+    width: theme.spacing(1),
     height: '80%',
     position: 'absolute',
     pointerEvents: 'none',
@@ -124,6 +124,13 @@ const useStyles = makeStyles(theme => ({
     margin: '0.3em',
     index: '10',
     right: '0',
+    '&:hover': {
+      cursor: 'pointer'
+    },
+    [theme.breakpoints.up('sm')]: {
+      width: '28px',
+      paddingLeft: '0.5em',
+    },
     [theme.breakpoints.down('sm')]: {
       possition: 'absolute',
       maxWidth: '8%',
@@ -158,19 +165,52 @@ const useStyles = makeStyles(theme => ({
   },
   button: {
     margin: theme.spacing(1),
-    display: 'inline-block!important',
+    display: 'flex',
     fontWeight: '500',
     lineHeight: '1.4',
     letterSpacing: '.04em',
     '-webkit-font-smoothing': 'antialiased',
-    textAlign: 'right!important',
+    textAlign: 'right',
     padding: '0',
     marginLeft: '0',
     textTransform: 'capitalize',
     '&:hover': {
       backgroundColor: 'transparent',
       color: '#8e7143'
-    }
+    },
+    [theme.breakpoints.up('sm')]: {
+      '&:nth-child(4)': {
+        fontSize: '0.7em',
+        '& span': {
+          flexDirection: 'row-reverse',
+          display: 'flex',
+        }
+      },
+      '&:last-child': {
+        display: 'none'
+      },
+      margin: '0'
+    },
+    [theme.breakpoints.down('sm')]: {
+      display: 'block',
+      textAlign: 'center',
+      margin: '0',
+      padding: '0',
+      '&:first-child': {
+        display: 'none'
+      },
+      '&:nth-child(3)': {
+        display: 'none'
+      },
+    },
+  },
+  buttonWrapper: {
+    [theme.breakpoints.up('sm')]: {
+      display: 'flex',
+    },
+    [theme.breakpoints.down('sm')]: {
+      display: 'flex',
+    },
   },
   storeAmount: {
     fontSize: '0.9em',
@@ -187,6 +227,18 @@ const useStyles = makeStyles(theme => ({
     display: 'none',
     [theme.breakpoints.up('md')]: {
       display: 'flex',
+    },
+  },
+  iconButton: {
+    [theme.breakpoints.up('sm')]: {
+      display: 'none',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.875rem',
+      display: 'flex',
+      verticalAlign: 'middle',
+      textAlign: 'center',
+      margin: 'auto',
     },
   },
   sectionMobile: {

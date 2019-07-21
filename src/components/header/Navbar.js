@@ -1,4 +1,5 @@
 import React from 'react';
+import Icon from '@material-ui/core/Icon';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -10,8 +11,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import Button from '@material-ui/core/Button';
-import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
-import MoreIcon from '@material-ui/icons/MoreVert';
 import useStyles from './HeaderStyle';
 import HeaderAdvert from './HeaderAdvert';
 
@@ -36,9 +35,9 @@ export default function Navbar() {
     handleMobileMenuClose();
   }
 
-  function handleMobileMenuOpen(event) {
-    setMobileMoreAnchorEl(event.currentTarget);
-  }
+  // function handleMobileMenuOpen(event) {
+  //   setMobileMoreAnchorEl(event.currentTarget);
+  // }
 
   const menuId = 'primary-search-account-menu';
   const renderMenu = (
@@ -81,32 +80,23 @@ export default function Navbar() {
     </Menu>
   );
 
+  const clientDevice = document.documentElement.clientWidth
+
   return (
     <div className={classes.grow}>
       <AppBar position="static">
         <div className={classes.topAdvert}>
           <HeaderAdvert />
           <div className={classes.advertCurrency}>
-            <span>GBP(&#163;)&nbsp;</span>
+            <span>GBP (&#163;) &nbsp; </span>
             <img src='/images/GB.svg' alt='GB Flag' />
           </div>
         </div>
         <Toolbar className={classes.growOne}>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="Open drawer"
-          >
-            <MenuIcon />
-          </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
             <img className={classes.logo} alt='logo-img' src='/images/logo.svg' />
           </Typography>
           <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
-            </div>
             <InputBase
               placeholder="What are you looking for?"
               classes={{
@@ -115,35 +105,44 @@ export default function Navbar() {
               }}
               inputProps={{ 'aria-label': 'Search'}}
             />
+            <div className={classes.searchIcon}>
+              <SearchIcon />
+            </div>
           </div>
-          <div className={classes.growOne} />
-          <div className={classes.sectionDesktop}>
-            <Button className={classes.button}>Wishlist</Button>
-            <Button className={classes.button}>Sign In</Button>
-            <Button className={classes.button}>Stores</Button>
-            <IconButton
+          <div className={classes.buttonWrapper}>
+            <Button className={classes.button}>
+                <Icon className={classes.iconButton}>add_alert</Icon>
+                <span>Wishlist</span>
+            </Button>
+            <Button className={classes.button}>
+              <Icon className={classes.iconButton}>person_outline</Icon>
+              <span>Sign In</span>
+            </Button>
+            <Button className={classes.button}>
+              <Icon className={classes.iconButton}>shopping_basket_outline</Icon>
+              <span>Stores</span>
+            </Button>
+            <Button
               edge="end"
               aria-label="Account of current user"
               aria-controls={menuId}
               aria-haspopup="true"
               onClick={handleProfileMenuOpen}
               color="inherit"
-              className={classes.storeAmount}
+              className={classes.button}
             >
-              <span className={classes.storeAmount}>(0)</span>
-              <AddShoppingCartIcon />
-            </IconButton>
-          </div>
-          <div className={classes.sectionMobile}>
-            <IconButton
-              aria-label="Show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
+              <Icon className={classes.iconButton}>add_shopping_cart</Icon>
+              <span>(o)</span>
+            </Button>
+            <Button
+              edge="start"
+              className={classes.button}
               color="inherit"
+              aria-label="Open drawer"
             >
-              <MoreIcon />
-            </IconButton>
+              <MenuIcon className={classes.iconButton} />
+              <span>Menu</span>
+            </Button>
           </div>
         </Toolbar>
       </AppBar>

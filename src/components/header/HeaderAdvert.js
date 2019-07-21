@@ -26,11 +26,11 @@ export default function HeaderAdvert() {
         infinite='true'
         previousButton=''
         nextButton=''
-        style={{height: '20px'}}
+        style={{height: '20px', overflow: 'hiden'}}
       >
         {content.map(article => 
-        <div key={article.id} style={{height: '20px'}}>
-          <div style={{height: '20px'}}>{article.advert}</div>
+        <div key={article.id} style={{height: '20px', overflow: 'hiden'}}>
+          <div style={{height: '20px', overflow: 'hiden'}}>{article.advert}</div>
         </div>)}
       </Slider>
     </div>
