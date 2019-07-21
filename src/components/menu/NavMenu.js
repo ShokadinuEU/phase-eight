@@ -4,11 +4,14 @@ import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     padding: '0 0.1em',
     margin: '0 0.1em',
+    [theme.breakpoints.down('sm')]: {
+      display: 'none'
+    },
   },
   setMenu: {
     boxSizing: 'border-box',
@@ -61,7 +64,7 @@ const useStyles = makeStyles({
       color: 'red'
     }
   },
-});
+}));
 
 export default function NavMenu() {
   const classes = useStyles();
