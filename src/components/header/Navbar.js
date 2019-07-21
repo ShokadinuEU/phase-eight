@@ -12,7 +12,8 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import Button from '@material-ui/core/Button';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import MoreIcon from '@material-ui/icons/MoreVert';
-import useStyles from './HeaderStyle'
+import useStyles from './HeaderStyle';
+import HeaderAdvert from './HeaderAdvert';
 
 export default function Navbar() {
   const classes = useStyles();
@@ -83,6 +84,13 @@ export default function Navbar() {
   return (
     <div className={classes.grow}>
       <AppBar position="static">
+        <div className={classes.topAdvert}>
+          <HeaderAdvert />
+          <div className={classes.advertCurrency}>
+            <span>GBP(&#163;)&nbsp;</span>
+            <img src='/images/GB.svg' alt='GB Flag' />
+          </div>
+        </div>
         <Toolbar className={classes.growOne}>
           <IconButton
             edge="start"

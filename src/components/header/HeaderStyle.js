@@ -16,7 +16,36 @@ const useStyles = makeStyles(theme => ({
       display: 'table',
       padding: '0.2em 0.4em',
     },
-    
+  },
+  topAdvert: {
+    width: '100%',
+    height: '3vh',
+    color: 'white',
+    backgroundColor: '#8e7143',
+    textAlign: 'center',
+    minHeight: '1.5625rem',
+    padding: '.25rem',
+  },
+  advertCurrency: {
+    top: '0.3em',
+    color: 'white',
+    right: '0',
+    height: '1.4em',
+    width: '6em',
+    backgroundColor: '#8e7143',
+    [theme.breakpoints.up('sm')]: {
+      display: 'block',
+      fontSize: '0.9em',
+      fontWeight: '600',
+      position: 'absolute',
+      '& > img': {
+        width: '15px',
+        height: 'auto'
+      }
+    },
+    [theme.breakpoints.down('sm')]: {
+      display: 'none'
+    },
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -67,10 +96,10 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'row-reverse',
     [theme.breakpoints.up('sm')]: {
+      width: '350px',
       marginLeft: theme.spacing(20),
-      width: 'auto',
       border: '1px solid #ccc',
-      borderRadius: '2px'
+      borderRadius: '2px',
     },
     [theme.breakpoints.down('sm')]: {
       position: 'relative',
@@ -94,12 +123,11 @@ const useStyles = makeStyles(theme => ({
     borderLeft: '1px solid #ccc',
     margin: '0.3em',
     index: '10',
+    right: '0',
     [theme.breakpoints.down('sm')]: {
       possition: 'absolute',
       maxWidth: '8%',
-      right: '0',
       borderLeft: '1px solid white',
-
     },
   },
   inputRoot: {
@@ -107,6 +135,7 @@ const useStyles = makeStyles(theme => ({
     '&::placeholder': {
       color: 'black'
     },
+    display: 'contents',
     [theme.breakpoints.down('md')]: {
       width: '100%',
       maxWidth: '87%',
