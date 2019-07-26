@@ -18,6 +18,7 @@ export default function Navbar() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+  const [clientDevice, setClientDevice] = React.useState(0);
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -79,8 +80,6 @@ export default function Navbar() {
       </MenuItem>
     </Menu>
   );
-
-  const clientDevice = document.documentElement.clientWidth
 
   return (
     <div className={classes.grow}>
