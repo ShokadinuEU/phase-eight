@@ -12,6 +12,8 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'space-between',
     color: 'black',
     backgroundColor: 'white',
+    // zIndex: '999',
+    width: '100%',
     [theme.breakpoints.down('sm')]: {
       display: 'table',
       padding: '0.2em 0.4em',
@@ -114,7 +116,7 @@ const useStyles = makeStyles(theme => ({
   },
   searchIcon: {
     width: theme.spacing(1),
-    height: '80%',
+    // height: '80%',
     position: 'absolute',
     pointerEvents: 'none',
     display: 'flex',

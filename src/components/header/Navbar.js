@@ -1,4 +1,5 @@
 import React from 'react';
+import useWindowScrollPosition from "@rehooks/window-scroll-position";
 import Icon from '@material-ui/core/Icon';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -15,13 +16,24 @@ import useStyles from './HeaderStyle';
 import HeaderAdvert from './HeaderAdvert';
 
 export default function Navbar() {
-  const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+  const [change, setChange] = React.useState(false);
   // const [clientDevice, setClientDevice] = React.useState(0);
-
+  
+  let position = useWindowScrollPosition();
+  const changePosition = 1;
+  const classes = useStyles();
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+
+  if (position.y > changePosition && !change) {
+    setChange(true);
+  }
+
+  if (position.y <= changePosition && change) {
+    setChange(false);
+  }
 
   function handleProfileMenuOpen(event) {
     setAnchorEl(event.currentTarget);
@@ -91,7 +103,7 @@ export default function Navbar() {
             <img src='/images/GB.svg' alt='GB Flag' />
           </div>
         </div>
-        <Toolbar className={classes.growOne}>
+        <Toolbar className={classes.growOne} >
           <Typography className={classes.title} variant="h6" noWrap>
             <img className={classes.logo} alt='logo-img' src='/images/logo.svg' />
           </Typography>
