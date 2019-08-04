@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
     fontWeight: '700',
     minWidth: '98px',
     maxWidth: '127px',
-    lineHeight: '1',
+    lineHeight: '1.2',
     padding: '0 0.6em',
     margin: '0 0.5em',
     opacity: '1',

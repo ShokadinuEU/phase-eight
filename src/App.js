@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './components/header/Navbar'
 import NavMenu from './components/menu/NavMenu'
 import Intro from './components/intro/Intro'
+import Article from './components/firstArticle/Article'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Navbar />
       <NavMenu />
       <Intro />
+      <Article />
     </div>
   );
 }
