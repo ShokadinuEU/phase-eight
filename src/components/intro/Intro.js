@@ -1,4 +1,5 @@
 import React from 'react'
+import { makeStyles } from '@material-ui/core/styles';
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 
@@ -18,21 +19,29 @@ export default function Intro() {
     {
       id: 3,
       imageSrc: './images/header/header-three.jpg',
-      description: 'Third image header'
+      description: 'Third image header',
+      text: 'New Season',
+      subTextOne: 'Florals',
+      subTextTwo: 'Your Exclusive AW19 Preview is Here',
+      subTextThree: 'Shop our new styles'
     }
   ] 
 
-  const sliderHeader = {
-    height: '70vh', 
-    width: '100vw', 
-    overflow: 'hidden'
-  }
+  const useStyles = makeStyles(theme => ({
+    sliderHeader: {
+      height: '70vh', 
+      width: '100vw', 
+      overflow: 'hidden'
+    },
+  }))
+
+  const classes = useStyles();
   return (
-    <div style={sliderHeader}>
+    <div className={classes.sliderHeader}>
       <Slider
         infinite='true'
-        duration='1800'
-        autoplay='2200'
+        duration='2200'
+        autoplay='2500'
         previousButton=''
         nextButton=''
         className="slider-wrapper"

@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 
 export default function Article() {
-  const content =[
+  const content = [
     {
       id: 1,
       imageSrc: './images/sections/section-one.jpg',
@@ -31,9 +31,9 @@ export default function Article() {
     articleSection: {
       height: '85vh', 
       width: '96vw',
-      margin:'auto',
       display:'flex',
-      margin:'2em 1em'
+      margin:'2em 1em',
+      marginBottom: '0.1em'
     },
     articleWrapper: {
       position: 'relative'

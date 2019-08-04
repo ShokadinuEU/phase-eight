@@ -30,7 +30,7 @@ export default function HeaderAdvert() {
       >
         {content.map(article => 
         <div key={article.id} style={{height: '20px', overflow: 'hidden'}}>
-          <div style={{height: '20px', overflow: 'hidden'}}>{article.advert}</div>
+          <div style={{height: '20px',lineHeight: '1.5', overflow: 'hidden'}}>{article.advert}</div>
         </div>)}
       </Slider>
     </div>

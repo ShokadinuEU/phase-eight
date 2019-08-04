@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: '#8e7143',
     textAlign: 'center',
     minHeight: '1.5625rem',
-    padding: '.25rem',
+    // padding: '.25rem',
   },
   advertCurrency: {
     top: '0.3em',
