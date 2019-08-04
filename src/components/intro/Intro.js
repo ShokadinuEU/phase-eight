@@ -14,21 +14,37 @@ export default function Intro() {
       id: 2,
       imageSrc: './images/header/header-two.jpg',
       description: 'Second image header'
+    },
+    {
+      id: 3,
+      imageSrc: './images/header/header-three.jpg',
+      description: 'Third image header'
     }
   ] 
+
+  const sliderHeader = {
+    height: '70vh', 
+    width: '100vw', 
+    overflow: 'hidden'
+  }
   return (
-    <div style={{height: '500px', overflow: 'hiden'}}>
+    <div style={sliderHeader}>
       <Slider
+        infinite='true'
         duration='1800'
         autoplay='2200'
-        infinite='true'
         previousButton=''
         nextButton=''
-        style={{height: '500px', overflow: 'hiden'}}
+        className="slider-wrapper"
       >
-        {content.map(article => 
-        <div key={article.id} style={{height: '500px', overflow: 'hiden'}}><img src={article.imageSrc} style={{height: '500px', width: '100vw'}} alt={article.description} />
-        </div>)}
+        {content.map((item, i) =>
+          <div
+            key={i}
+            className="slider-content"
+            style={{ background: `url('${item.imageSrc}') no-repeat center center`, backgroundSize:'100%', height:'70vh' }}
+          >
+          </div>
+        )}
       </Slider>
     </div>
   )
