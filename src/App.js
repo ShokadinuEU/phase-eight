@@ -6,6 +6,7 @@ import Intro from './components/intro/Intro'
 import Article from './components/firstArticle/Article'
 import Impressions from './components/secondArticle/Article'
 import Seasons from './components/thirdArticle/Seasons'
+import Clients from './components/fourthArticle/Clients'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Article />
       <Impressions />
       <Seasons />
+      <Clients />
     </div>
   );
 }
