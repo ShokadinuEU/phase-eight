@@ -5,6 +5,7 @@ import NavMenu from './components/menu/NavMenu'
 import Intro from './components/intro/Intro'
 import Article from './components/firstArticle/Article'
 import Impressions from './components/secondArticle/Article'
+import Seasons from './components/thirdArticle/Seasons'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Intro />
       <Article />
       <Impressions />
+      <Seasons />
     </div>
   );
 }

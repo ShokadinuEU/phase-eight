@@ -71,6 +71,10 @@ export default function Article() {
       textDecoration: 'underline',
       fontSize: '1em',
       marginBottom: '2em',
+      '&:hover': {
+        cursor: 'pointer',
+        textDecoration: 'none'
+      }
     }
   }))
   const classes = useStyles();

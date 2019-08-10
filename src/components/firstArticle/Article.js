@@ -53,7 +53,11 @@ export default function Article() {
       '& > span': {
         fontSize: '1em',
         color: 'white',
-        textDecoration: 'underline'
+        textDecoration: 'underline',
+        '&:hover': {
+          cursor: 'pointer',
+          textDecoration: 'none'
+        }
       },
     }
   }))
