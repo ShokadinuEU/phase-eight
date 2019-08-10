@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/phase-eight/static/css/main.4a27deca.chunk.css",
+    "main.js": "/phase-eight/static/js/main.b814bfd0.chunk.js",
+    "main.js.map": "/phase-eight/static/js/main.b814bfd0.chunk.js.map",
+    "runtime~main.js": "/phase-eight/static/js/runtime~main.0cd42760.js",
+    "runtime~main.js.map": "/phase-eight/static/js/runtime~main.0cd42760.js.map",
+    "static/css/2.d4c5f937.chunk.css": "/phase-eight/static/css/2.d4c5f937.chunk.css",
+    "static/js/2.57690721.chunk.js": "/phase-eight/static/js/2.57690721.chunk.js",
+    "static/js/2.57690721.chunk.js.map": "/phase-eight/static/js/2.57690721.chunk.js.map",
+    "index.html": "/phase-eight/index.html",
+    "precache-manifest.970c7fbf2e96094a4437ea56843ae160.js": "/phase-eight/precache-manifest.970c7fbf2e96094a4437ea56843ae160.js",
+    "service-worker.js": "/phase-eight/service-worker.js",
+    "static/css/2.d4c5f937.chunk.css.map": "/phase-eight/static/css/2.d4c5f937.chunk.css.map",
+    "static/css/main.4a27deca.chunk.css.map": "/phase-eight/static/css/main.4a27deca.chunk.css.map"
+  }
+}
