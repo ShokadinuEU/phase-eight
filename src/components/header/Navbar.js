@@ -100,12 +100,12 @@ export default function Navbar() {
           <HeaderAdvert />
           <div className={classes.advertCurrency}>
             <span>GBP (&#163;) &nbsp; </span>
-            <img src='/images/GB.svg' alt='GB Flag' />
+            <img src='images/GB.svg' alt='GB Flag' />
           </div>
         </div>
         <Toolbar className={classes.growOne} >
           <Typography className={classes.title} variant="h6" noWrap>
-            <img className={classes.logo} alt='logo-img' src='/images/logo.svg' />
+            <img className={classes.logo} alt='logo-img' src='images/logo.svg' />
           </Typography>
           <div className={classes.search}>
             <InputBase
