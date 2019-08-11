@@ -5,14 +5,14 @@ import { makeStyles } from '@material-ui/core/styles'
 export default function Footer() {
 
   const content = [
-    hereToHelp = {
+    {
       link_header: 'Here to Help',
       link_zero: 'Contact Us',
       link_one: 'Delivery & Collection',
       link_two: 'Returns',
       link_three: 'FAQs',
     },
-    shopping = {
+    {
       link_header: 'Shopping',
       link_zero: 'Store Locator',
       link_one: 'Track Your Order',
@@ -22,7 +22,7 @@ export default function Footer() {
       link_five: 'Personal Styling',
       link_six: 'Refer a Friend',
     },
-    aboutUs = {
+    {
       link_header: 'About Us',
       link_zero: 'Our Story',
       link_one: 'Corporate Responsibility',
@@ -30,7 +30,7 @@ export default function Footer() {
       link_three: 'Affiliates',
       link_four: 'Reviews',
     },
-    legal = {
+    {
       link_header: 'Legal',
       link_zero: 'Terms & Conditions',
       link_one: 'Competitions & Offers',
@@ -54,26 +54,62 @@ export default function Footer() {
       '-webkit-font-smoothing': 'antialiased',
     },
     footerContainer: {
-      width: '100%',
+      display: 'flex',
+      justifyContent: 'space-between',
+      width: '80%',
       paddingRight: '10px',
       paddingLeft: '10px',
       marginRight: 'auto',
       marginLeft: 'auto',
+      padding: '2.5em',
+      cursor: 'default',
     },
     footerContent: {
       display: 'flex',
-      flexWrap: 'wrap',
-      marginRight: '-10px',
-      marginLeft: '-10px',
-    }    
+      flexDirection: 'column',
+      width: '100%',
+      '& ul li': {
+        marginBottom: '0.5em',
+        '&:hover': {
+          cursor: 'pointer',
+        }
+      }
+    },
+    linksHeader: {
+      fontSize: '.875rem',
+      letterSpacing: '.09375rem',
+      fontWeight: '700',
+      textTransform: 'uppercase',
+      marginBottom: '1.2em',
+    },    
+    linksList: {
+      paddingBottom: '0.25rem',
+      fontSize: '.875rem',
+      letterSpacing: '.09375rem',
+    },    
   }))
   const classes = useStyles();
   return (
     <div className={classes.footerMain}>
       <div className={classes.footerContainer}>
-        <div className={classes.footerContent}>
-        
-        </div>
+          {
+            content.map((item,i) => 
+              <div className={classes.footerContent} key={i}>
+                <h4 className={classes.linksHeader}>
+                  {item.link_header}
+                </h4>
+                <ul className={classes.linksList}>
+                  <li>{item.link_zero}</li>
+                  <li>{item.link_one}</li>
+                  <li>{item.link_two}</li>
+                  <li>{item.link_three}</li>
+                  <li>{item.link_four}</li>
+                  <li>{item.link_five}</li>
+                  <li>{item.link_six}</li>
+                </ul>
+              </div>
+            ) 
+          }
       </div>
     </div>
   )
