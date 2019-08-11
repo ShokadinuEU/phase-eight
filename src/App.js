@@ -7,6 +7,7 @@ import Article from './components/firstArticle/Article'
 import Impressions from './components/secondArticle/Article'
 import Seasons from './components/thirdArticle/Seasons'
 import Clients from './components/fourthArticle/Clients'
+import Contact from './components/fifthArticle/Contact'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Impressions />
       <Seasons />
       <Clients />
+      <Contact />
     </div>
   );
 }
