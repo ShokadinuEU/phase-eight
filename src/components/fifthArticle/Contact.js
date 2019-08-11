@@ -4,8 +4,7 @@ import Icon from '@material-ui/core/Icon'
 import InputBase from '@material-ui/core/InputBase'
 
 
-export default function Article() {
- 
+export default function Contact() {
 
   const useStyles = makeStyles(theme => ({
     contactSection: {
