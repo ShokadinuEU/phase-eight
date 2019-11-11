@@ -21,7 +21,6 @@ export default function Contact() {
       fontFamily: 'Lato,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif',
     },
     trackOrder: {
-      display: 'flex',
       flexDirection: 'column',
       display: 'block',
       textAlign: 'center',
@@ -32,7 +31,6 @@ export default function Contact() {
       }
     },
     subscribe: {
-      display: 'flex',
       flexDirection: 'column',
       display: 'block',
       textAlign: 'center',
@@ -43,7 +41,6 @@ export default function Contact() {
       },
     },
     phoneCall: {
-      display: 'flex',
       flexDirection: 'column',
       display: 'block',
       textAlign: 'center',

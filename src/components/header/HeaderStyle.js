@@ -12,7 +12,6 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'space-between',
     color: 'black',
     backgroundColor: 'white',
-    // zIndex: '999',
     width: '100%',
     [theme.breakpoints.down('sm')]: {
       display: 'table',
@@ -26,7 +25,6 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: '#8e7143',
     textAlign: 'center',
     minHeight: '1.5625rem',
-    // padding: '.25rem',
   },
   advertCurrency: {
     top: '0.3em',
@@ -116,7 +114,6 @@ const useStyles = makeStyles(theme => ({
   },
   searchIcon: {
     width: theme.spacing(1),
-    // height: '80%',
     position: 'absolute',
     pointerEvents: 'none',
     display: 'flex',
@@ -248,6 +245,9 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('md')]: {
       display: 'none',
     },
+  },
+  body: {
+    padding: '0'
   },
 }));
 
