@@ -1,5 +1,9 @@
-import React from 'react'
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
 
 
 export default function Article() {
@@ -87,15 +91,15 @@ export default function Article() {
   return (
     <div className={classes.seasonsWrapper}>
       {content.map((item, i) =>
-          <div
+          <div data-aos="zoom-in"
             key={i}
             className={classes.season}
           >
             <img className={classes.seasonImage} src={item.imageSrc} alt={item.description} />
             <div className={classes.seasonsText}>
-              <h2>{item.header}</h2>
-              <p>{item.subHeader}</p>
-              <span className={classes.upperCaseLink}>{item.link}</span>
+              <h2 data-aos="zoom-out-down">{item.header}</h2>
+              <p data-aos="fade-left">{item.subHeader}</p>
+              <span data-aos="fade-right" className={classes.upperCaseLink}>{item.link}</span>
             </div>
           </div>
         )}

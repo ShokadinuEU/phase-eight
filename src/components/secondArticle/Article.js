@@ -81,7 +81,9 @@ export default function Article() {
       }
     }
   }))
+
   const classes = useStyles();
+  
   return (
     <div className={classes.articleSection}>
       <div className={classes.articleHeader}>
