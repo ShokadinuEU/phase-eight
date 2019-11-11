@@ -1,5 +1,9 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
 
 
 export default function Article() {
@@ -66,11 +70,13 @@ export default function Article() {
     <div className={classes.articleSection}>
       {content.map((item, i) =>
         <div
+          data-aos="zoom-in-up"
           key={i}
           style={{ background: `url('${item.imageSrc}') no-repeat center center`, backgroundSize:'100%', height:'96%', width:'33%', margin: '0.5em' }}
           className={classes.articleWrapper}
         >
-          <div className={classes.textFirstArticle}>
+          <div className={classes.textFirstArticle}
+                data-aos="fade-down">
             <p>{item.text}</p>
             <span>{item.subText}</span>
           </div>
