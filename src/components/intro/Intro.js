@@ -31,7 +31,53 @@ export default function Intro() {
     sliderHeader: {
       height: '70vh', 
       width: '100vw', 
-      overflow: 'hidden'
+      overflow: 'hidden',
+      [theme.breakpoints.down('sm')]: {
+        // display: 'none',
+      },
+    },
+    sliderContent: {
+      [theme.breakpoints.down('sm')]: {
+        display: 'none',
+      },
+    },
+    sliderWrapper: {
+      [theme.breakpoints.down('sm')]: {
+        display: 'none',
+      },
+    },
+    introMobile: {
+      [theme.breakpoints.down('sm')]: {
+        height: '74vh',
+        width: '100%',
+        margin: '0.5em 0',
+        position: 'relative',
+        '& img': {
+          width: '100%',
+          height: '70vh'
+        }
+      },
+    },
+    introOverlay: {
+      [theme.breakpoints.down('sm')]: {
+        position: 'absolute',
+        top: '105px',
+        textTransform: 'capitalize',
+        color: '#836938',
+        fontFamily: 'serif',
+        letterSpacing: '5px',
+        '& h4': {
+          fontSize: '3.5em',
+          paddingLeft: '0.4em',
+          fontWeight: '300',
+          lineHeight: '1.1'
+        },
+        '& p': {
+          fontSize: '1.3em',
+          padding: '1em',
+          textDecoration: 'underline',
+        }
+      },
     },
   }))
 
@@ -44,17 +90,31 @@ export default function Intro() {
         autoplay='2500'
         previousButton=''
         nextButton=''
-        className="slider-wrapper"
+        className={classes.sliderWrapper}
       >
         {content.map((item, i) =>
           <div
             key={i}
-            className="slider-content"
+            className={classes.sliderContent}
             style={{ background: `url('${item.imageSrc}') no-repeat center center`, backgroundSize:'100%', height:'70vh' }}
           >
           </div>
         )}
       </Slider>
+      <div className={classes.introMobile}>
+          <div className={classes.introMobilePicture}>
+            <img src="./images/mobile/intro/intro-mobile.jpg" alt="Intro Mobile" />
+          </div>
+          <div className={classes.introOverlay}>
+            <h4>
+              State<br />
+              Ment<br />
+              Making <br />
+              Style
+            </h4>
+            <p>Shop the new collection</p>
+          </div>
+      </div>
     </div>
   )
 }
