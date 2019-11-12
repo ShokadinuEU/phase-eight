@@ -33,8 +33,7 @@ export default function Article() {
       height: '600px',
       maxWidth: '100%',
     },
-    season: {
-      // color: 'white',  
+    season: { 
       width: 'auto',
       height: '570px',
       position: 'relative',

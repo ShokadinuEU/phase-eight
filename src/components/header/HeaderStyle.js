@@ -14,7 +14,8 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: 'white',
     width: '100%',
     [theme.breakpoints.down('sm')]: {
-      display: 'table',
+      display: 'flex',
+      flexFlow: 'wrap',
       padding: '0.2em 0.4em',
     },
   },
@@ -71,13 +72,13 @@ const useStyles = makeStyles(theme => ({
       '"Segoe UI Symbol"',
     ].join(','),
     [theme.breakpoints.down('sm')]: {
-      display: 'contents',
+      display: 'inline-flex',
       height: '100%',
-      width: '100%',
+      width: '45%',
       padding: '0',
+      order: '1',
       '& > img': {
         padding: '0',
-        maxWidth: '45%',
         height: '100%'
       }
     },
@@ -109,7 +110,8 @@ const useStyles = makeStyles(theme => ({
       marginRight: '0',
       flexDirection: 'column',
       backgroundColor: '#f3f3f3',
-      borderRadius: '0'
+      borderRadius: '0',
+      float: 'none'
     },
   },
   searchIcon: {
@@ -133,6 +135,7 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('sm')]: {
       possition: 'absolute',
       maxWidth: '8%',
+      width: '9%',
       borderLeft: '1px solid white',
     },
   },
@@ -209,6 +212,8 @@ const useStyles = makeStyles(theme => ({
     },
     [theme.breakpoints.down('sm')]: {
       display: 'flex',
+      order: '1',
+      width: '50%'
     },
   },
   storeAmount: {
