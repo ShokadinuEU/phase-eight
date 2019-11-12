@@ -37,10 +37,25 @@ export default function Article() {
       width: '96vw',
       display:'flex',
       margin:'2em 1em',
-      marginBottom: '0.1em'
+      marginBottom: '0.1em',
+      [theme.breakpoints.down('sm')]: {
+        width: '98%',
+        height: '85vh',
+        display: 'block',
+        margin: '0.2em'
+      },
     },
     articleWrapper: {
-      position: 'relative'
+      position: 'relative',
+      width:'33%',
+      margin: '0.5em',
+      backgroundSize:'100%', 
+      height:'96%',
+      [theme.breakpoints.down('sm')]: {
+        width: 'auto',
+        height: '82%',
+        backgroundSize: "100%"
+      },
     },
     textFirstArticle: {
       position: 'absolute',
@@ -63,20 +78,21 @@ export default function Article() {
           textDecoration: 'none'
         }
       },
+      [theme.breakpoints.down('sm')]: {
+        bottom: '2em'
+      },
     }
   }))
   const classes = useStyles();
   return (
-    <div className={classes.articleSection}>
+    <div className={classes.articleSection} data-aos="fade-up">
       {content.map((item, i) =>
         <div
-          data-aos="zoom-in-up"
           key={i}
-          style={{ background: `url('${item.imageSrc}') no-repeat center center`, backgroundSize:'100%', height:'96%', width:'33%', margin: '0.5em' }}
+          style={{ background: `url('${item.imageSrc}') no-repeat center center`, backgroundSize:'100%'}}
           className={classes.articleWrapper}
         >
-          <div className={classes.textFirstArticle}
-                data-aos="fade-down">
+          <div className={classes.textFirstArticle}>
             <p>{item.text}</p>
             <span>{item.subText}</span>
           </div>
