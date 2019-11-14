@@ -33,7 +33,6 @@ export default function Intro() {
       width: '100vw', 
       overflow: 'hidden',
       [theme.breakpoints.down('sm')]: {
-        // display: 'none',
       },
     },
     sliderContent: {
@@ -61,11 +60,12 @@ export default function Intro() {
     introOverlay: {
       [theme.breakpoints.down('sm')]: {
         position: 'absolute',
-        top: '105px',
+        top: '75px',
         textTransform: 'capitalize',
         color: '#836938',
         fontFamily: 'serif',
         letterSpacing: '5px',
+        userSelect: 'none',
         '& h4': {
           fontSize: '3.5em',
           paddingLeft: '0.4em',

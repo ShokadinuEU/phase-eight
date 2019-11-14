@@ -41,7 +41,7 @@ export default function Article() {
       [theme.breakpoints.down('sm')]: {
         width: '98%',
         height: '85vh',
-        display: 'block',
+        display: 'inline-table',
         margin: '0.2em'
       },
     },
@@ -90,11 +90,11 @@ export default function Article() {
         <div
           key={i}
           style={{ background: `url('${item.imageSrc}') no-repeat center center`, backgroundSize:'100%'}}
-          className={classes.articleWrapper}
+          className={classes.articleWrapper} data-aos="fade-up"
         >
-          <div className={classes.textFirstArticle}>
-            <p>{item.text}</p>
-            <span>{item.subText}</span>
+          <div className={classes.textFirstArticle} data-aos="fade-up">
+            <p data-aos="fade-up">{item.text}</p>
+            <span data-aos="fade-down">{item.subText}</span>
           </div>
         </div>
       )}
