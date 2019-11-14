@@ -51,6 +51,7 @@ export default function Article() {
       margin: '0.5em',
       backgroundSize:'100%', 
       height:'96%',
+      overflow: 'hidden',
       [theme.breakpoints.down('sm')]: {
         width: 'auto',
         height: '82%',
@@ -64,6 +65,7 @@ export default function Article() {
       width: '100%',
       textAlign: 'center',
       textTransform: 'uppercase',
+      overflow: 'hidden',
       '& > p': {
         fontSize: '1.8em',
         color: 'white',

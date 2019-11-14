@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     height: '3vh',
     color: 'white',
-    backgroundColor: '#8e7143',
+    backgroundColor: '#bf3723',
     textAlign: 'center',
     minHeight: '1.5625rem',
   },

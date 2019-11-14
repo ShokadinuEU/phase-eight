@@ -70,7 +70,7 @@ export default function Intro() {
           fontSize: '3.5em',
           paddingLeft: '0.4em',
           fontWeight: '300',
-          lineHeight: '1.1'
+          lineHeight: '1'
         },
         '& p': {
           fontSize: '1.3em',

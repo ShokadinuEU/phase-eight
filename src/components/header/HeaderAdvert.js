@@ -7,7 +7,7 @@ export default function HeaderAdvert() {
   const content =[
     {
       id: 1,
-      advert: 'FREE Returns on all orders'
+      advert: '30% Off Selected Dresses Shop Now!'
     },
     {
       id: 2,
@@ -16,6 +16,10 @@ export default function HeaderAdvert() {
     {
       id: 3,
       advert: 'Introduce your friends to Phase Eight'
+    },
+    {
+      id: 4,
+      advert: 'FREE Returns on all orders'
     }
   ] 
   return (
