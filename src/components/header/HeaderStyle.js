@@ -23,9 +23,12 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     height: '3vh',
     color: 'white',
-    backgroundColor: '#bf3723',
+    backgroundColor: '#8e7143',
     textAlign: 'center',
     minHeight: '1.5625rem',
+    [theme.breakpoints.down('sm')]: {
+      backgroundColor: '#bf3723',
+    }
   },
   advertCurrency: {
     top: '0.3em',

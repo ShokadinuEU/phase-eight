@@ -2,6 +2,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
+import Icon from '@material-ui/core/Icon';
 
 
 export default function Intro() {
@@ -95,6 +96,36 @@ export default function Intro() {
         }
       },
     },
+    chatFooter: {
+      [theme.breakpoints.down('sm')]: {
+        '& p': {
+          position: 'absolute',
+          fontSize: '0.7em',
+          bottom: '2em',
+          right: '20%'
+        }
+    }},
+    chatBox: {
+      [theme.breakpoints.down('sm')]: {
+        position: 'absolute',
+        fontSize: '0.7em',
+        bottom: '3.5em',
+        right: '-23px',
+        transform: 'rotate(-90deg)',
+        color: 'white',
+        backgroundColor: 'black',
+        padding: '0.9em',
+        fontFamily: 'sans-serif',
+        '& span': {
+          fontSize: '1.5em',
+          padding: '0',
+          margin: '0'
+        }
+    }},
+    iconChat: {
+      [theme.breakpoints.down('sm')]: {
+        // transform: 'rotate(-90deg)',
+    }},
   }))
 
   const classes = useStyles();
@@ -127,6 +158,15 @@ export default function Intro() {
               <span>OFF</span>
               <p>SELECTED DRESSES</p>
             <button>Shop now</button>
+          </div>
+          <div className={classes.chatFooter}>
+            <p>T&C's Apply</p>
+          </div>
+          <div className={classes.chatBox}>
+            <Icon className={classes.iconChat}>messageOutlined</Icon>
+            <span>
+              &nbsp; CHAT
+            </span>
           </div>
       </div>
     </div>
