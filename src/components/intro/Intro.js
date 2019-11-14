@@ -47,35 +47,51 @@ export default function Intro() {
     },
     introMobile: {
       [theme.breakpoints.down('sm')]: {
-        height: '74vh',
+        height: '70vh',
         width: '100%',
         margin: '0.5em 0',
         position: 'relative',
+        display: 'inline-table',
         '& img': {
           width: '100%',
-          height: '70vh'
+          height: '69vh'
         }
       },
     },
     introOverlay: {
       [theme.breakpoints.down('sm')]: {
         position: 'absolute',
-        top: '75px',
+        top: '105px',
+        right: '1px',
         textTransform: 'capitalize',
-        color: '#836938',
-        fontFamily: 'serif',
-        letterSpacing: '5px',
+        fontFamily: 'sans-serif',
+        width: '54%',
         userSelect: 'none',
+        textAlign: 'center',
         '& h4': {
-          fontSize: '3.5em',
+          fontSize: '1.5em',
           paddingLeft: '0.4em',
           fontWeight: '300',
-          lineHeight: '1'
+          lineHeight: '1',
+          display: "inline-table",
         },
+        '& span': {
+          textAlign: 'center',
+          color: '#bf3723',
+          fontSize: '2.5em',
+        }
+        ,
         '& p': {
-          fontSize: '1.3em',
-          padding: '1em',
-          textDecoration: 'underline',
+          fontSize: '1.15em',
+          padding: '1em 0',
+        },
+        '& button': {
+          fontSize: '1.15em',
+          textTransform: 'uppercase',
+          backgroundColor: '#bf3723',
+          color: 'white',
+          padding: '0.7em 1.2em',
+          border: '0',
         }
       },
     },
@@ -106,13 +122,11 @@ export default function Intro() {
             <img src="./images/mobile/intro/intro-mobile.jpg" alt="Intro Mobile" />
           </div>
           <div className={classes.introOverlay}>
-            <h4>
-              State<br />
-              Ment<br />
-              Making <br />
-              Style
-            </h4>
-            <p>Shop the new collection</p>
+            <h4> DRESS EVENT </h4><br /><br />
+              <span>30%</span><br />
+              <span>OFF</span>
+              <p>SELECTED DRESSES</p>
+            <button>Shop now</button>
           </div>
       </div>
     </div>
