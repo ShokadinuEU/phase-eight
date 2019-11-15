@@ -34,6 +34,8 @@ export default function Intro() {
       width: '100vw', 
       overflow: 'hidden',
       [theme.breakpoints.down('sm')]: {
+        paddingTop: '7em',
+        height: '100%',
       },
     },
     sliderContent: {

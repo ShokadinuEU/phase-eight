@@ -3,7 +3,7 @@ import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 
 
-export default function HeaderAdvert() {
+export default function Advert() {
   const content =[
     {
       id: 1,

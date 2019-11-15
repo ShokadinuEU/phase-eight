@@ -6,7 +6,7 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     color: 'black',
     backgroundColor: 'white',
-    display: 'contents'
+    display: 'contents',
   },
   growOne: {
     justifyContent: 'space-between',
@@ -254,6 +254,11 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('md')]: {
       display: 'none',
     },
+  },
+  root: {
+    [theme.breakpoints.down('sm')]: {
+      position: 'fixed'
+    }
   },
   body: {
     padding: '0'

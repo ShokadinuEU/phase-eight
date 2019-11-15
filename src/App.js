@@ -1,7 +1,6 @@
 import React from 'react'
 import './App.css'
-import Navbar from './components/header/Navbar'
-import NavMenu from './components/menu/NavMenu'
+import HeaderSection from './components/header/HeaderSection'
 import Intro from './components/intro/Intro'
 import Article from './components/firstArticle/Article'
 import Impressions from './components/secondArticle/Article'
@@ -13,8 +12,7 @@ import Footer from './components/footer/Footer'
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <NavMenu />
+      <HeaderSection />
       <Intro />
       <Article />
       <Impressions />

@@ -12,8 +12,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import Button from '@material-ui/core/Button';
-import useStyles from './HeaderStyle';
-import HeaderAdvert from './HeaderAdvert';
+import useStyles from './Style';
+import Advert from './Advert';
 
 
 export default function Navbar() {
@@ -96,9 +96,9 @@ export default function Navbar() {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <div className={classes.topAdvert}>
-          <HeaderAdvert />
+          <Advert />
           <div className={classes.advertCurrency}>
             <span>GBP (&#163;) &nbsp; </span>
             <img src='./images/GB.svg' alt='GB Flag' />

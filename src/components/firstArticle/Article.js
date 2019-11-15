@@ -86,6 +86,9 @@ export default function Article() {
       },
     },
     mobileArticleSection: {
+      [theme.breakpoints.up('sm')]: {
+        display: 'none'
+      },
       position: 'relative',
       '& img': {
         width: '100%',
