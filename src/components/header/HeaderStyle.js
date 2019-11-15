@@ -216,7 +216,8 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('sm')]: {
       display: 'flex',
       order: '1',
-      width: '50%'
+      width: '50%',
+      justifyContent: 'space-around'
     },
   },
   storeAmount: {
