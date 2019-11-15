@@ -42,7 +42,8 @@ export default function Article() {
         width: '98%',
         height: '85vh',
         display: 'inline-table',
-        margin: '0.2em'
+        margin: '0.2em',
+        display: 'none',
       },
     },
     articleWrapper: {
@@ -83,23 +84,64 @@ export default function Article() {
       [theme.breakpoints.down('sm')]: {
         bottom: '2em'
       },
+    },
+    mobileArticleSection: {
+      position: 'relative',
+      '& img': {
+        width: '100%',
+        height: '450px',
+        margin: '1em 0',
+      },
+    },
+    mobileArticleSectionText: {
+      position: 'absolute',
+      top: '320px',
+      left: '120px',
+      color: '#fff',
+      '& h4': {
+        fontSize: '1.6em',
+        fontWeight: '100',
+        lineHeight: '1.1',
+        '& span': {
+          fontStyle: 'italic'
+        }
+      },
+      '& p': {
+        marginTop: '1.5em',
+        textAlign: 'center',
+        textDecoration: 'underline',
+        textTransform: 'uppercase',
+        fontSize: '1.06em'
+      }
     }
   }))
   const classes = useStyles();
   return (
-    <div className={classes.articleSection} data-aos="fade-up">
-      {content.map((item, i) =>
-        <div
-          key={i}
-          style={{ background: `url('${item.imageSrc}') no-repeat center center`, backgroundSize:'100%'}}
-          className={classes.articleWrapper} data-aos="fade-up"
-        >
-          <div className={classes.textFirstArticle} data-aos="fade-up">
-            <p data-aos="fade-up">{item.text}</p>
-            <span data-aos="fade-down">{item.subText}</span>
+    <div>
+      <div className={classes.articleSection} data-aos="fade-up">
+        {content.map((item, i) =>
+          <div
+            key={i}
+            style={{ background: `url('${item.imageSrc}') no-repeat center center`, backgroundSize:'100%'}}
+            className={classes.articleWrapper} data-aos="fade-up"
+          >
+            <div className={classes.textFirstArticle} data-aos="fade-up">
+              <p data-aos="fade-up">{item.text}</p>
+              <span data-aos="fade-down">{item.subText}</span>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
+      <div className={classes.mobileArticleSection} data-aos="fade-up">
+          <img src="./images/sections/knitwear.jpg" alt="knit wear" />
+          <div className={classes.mobileArticleSectionText}>
+            <h4>
+              Layers you're <br />
+              <span>going to love.</span>
+            </h4>
+            <p>Shop knitwear</p>
+          </div>
+      </div>
     </div>
   )
 }
