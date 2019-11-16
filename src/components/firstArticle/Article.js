@@ -41,7 +41,6 @@ export default function Article() {
       [theme.breakpoints.down('sm')]: {
         width: '98%',
         height: '85vh',
-        display: 'inline-table',
         margin: '0.2em',
         display: 'none',
       },

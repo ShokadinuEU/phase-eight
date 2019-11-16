@@ -48,6 +48,9 @@ export default function Article() {
       textAlign: 'center',
       display: 'flex',
       flexDirection: 'column',
+      [theme.breakpoints.down('sm')]: {
+        margin: '0'
+      },
     },
     articleWrapper: {
       position: 'relative',
@@ -61,7 +64,11 @@ export default function Article() {
         fontWeight: '500',
         textTransform: 'uppercase',
         marginTop: '2em',
-      }
+      },
+      [theme.breakpoints.down('sm')]: {
+        display: 'inline-table',
+        marginTop: '-1em'
+      },
     },
     impressionsItems: {
       display: 'flex',
