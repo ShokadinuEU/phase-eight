@@ -109,15 +109,15 @@ export default function Intro() {
     }},
     chatBox: {
       [theme.breakpoints.down('sm')]: {
-        position: 'absolute',
         fontSize: '0.7em',
-        bottom: '3.5em',
+        bottom: '10em',
         right: '-23px',
         transform: 'rotate(-90deg)',
         color: 'white',
         backgroundColor: 'black',
         padding: '0.9em',
         fontFamily: 'sans-serif',
+        position: 'fixed',
         '& span': {
           fontSize: '1.5em',
           padding: '0',
