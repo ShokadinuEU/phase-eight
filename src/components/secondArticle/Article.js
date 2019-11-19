@@ -39,6 +39,29 @@ export default function Article() {
     },
   ] 
 
+  const mContent = [
+    {
+      id: 1,
+      imageSrc: './images/arrivals/m-arrivals.jpg',
+      description: 'Arrivals',
+    },
+    {
+      id: 2,
+      imageSrc: './images/arrivals/m-coat.jpg',
+      description: 'Coat',
+    },
+    {
+      id: 3,
+      imageSrc: './images/arrivals/m-dress.jpg',
+      description: 'Dress',
+    },
+    {
+      id: 4,
+      imageSrc: './images/arrivals/m-top.jpg',
+      description: 'Top',
+    },
+  ]
+
   const useStyles = makeStyles(theme => ({
     articleSection: {
       height: '85vh', 
@@ -49,7 +72,8 @@ export default function Article() {
       display: 'flex',
       flexDirection: 'column',
       [theme.breakpoints.down('sm')]: {
-        margin: '0'
+        margin: '0',
+        display: 'none',
       },
     },
     articleWrapper: {
@@ -86,27 +110,49 @@ export default function Article() {
         cursor: 'pointer',
         textDecoration: 'none'
       }
-    }
+    },
+    mArrivalsContent: {
+      display: 'none',
+      [theme.breakpoints.down('sm')]: {
+        display: 'flex',
+        flex: '0 0 50%',
+        maxWidth: '50%',
+        position: 'relative',
+        height: '50vh',
+        float: 'left',
+      },
+    },
   }))
 
   const classes = useStyles();
   
   return (
-    <div className={classes.articleSection}>
-      <div className={classes.articleHeader}>
-        <h4>Flora Impressions Collection</h4>
-      </div><br />
-      <div className={classes.impressionsItems}>
-        {content.map((item, i) =>
-          <div
-            key={i}
-            style={{ background: `url('${item.imageSrc}') no-repeat center center`, backgroundSize:'100%', height:'96%', width:'33%', margin: '0.5em' }}
-            className={classes.articleWrapper}
-          >
-          </div>
-        )}
-      </div><br />
-      <span className={classes.impressionsGet}>Shop the edit</span>
+    <div>
+      <div className={classes.articleSection}>
+        <div className={classes.articleHeader}>
+          <h4>Flora Impressions Collection</h4>
+        </div><br />
+        <div className={classes.impressionsItems}>
+          {content.map((item, i) =>
+            <div
+              key={i}
+              style={{ background: `url('${item.imageSrc}') no-repeat center center`, backgroundSize:'100%', height:'96%', width:'33%', margin: '0.5em' }}
+              className={classes.articleWrapper}
+            >
+            </div>
+          )}
+        </div><br />
+        <span className={classes.impressionsGet}>Shop the edit</span>
+      </div>
+      <div className={classes.mArrivalsMain}>
+          {
+            mContent.map(e => (
+              <div key={e.id} className={classes.mArrivalsContent}>
+                <img src={e.imageSrc} alt={e.description} />
+              </div>
+            ))
+          }
+      </div>
     </div>
   )
 }
