@@ -72,7 +72,6 @@ export default function Article() {
       display: 'flex',
       flexDirection: 'column',
       [theme.breakpoints.down('sm')]: {
-        margin: '0',
         display: 'none',
       },
     },
@@ -144,7 +143,7 @@ export default function Article() {
         </div><br />
         <span className={classes.impressionsGet}>Shop the edit</span>
       </div>
-      <div className={classes.mArrivalsMain}>
+      <div className={classes.mArrivalsMain} data-aos="fade-up">
           {
             mContent.map(e => (
               <div key={e.id} className={classes.mArrivalsContent}>

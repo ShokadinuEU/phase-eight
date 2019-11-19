@@ -32,6 +32,9 @@ export default function Article() {
       display: 'flex',
       height: '600px',
       maxWidth: '100%',
+      [theme.breakpoints.down('sm')]: {
+        display: 'none',
+      },
     },
     season: { 
       width: 'auto',
