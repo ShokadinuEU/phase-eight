@@ -1,6 +1,7 @@
 import React from 'react'
-import NavMenu from '../menu/NavMenu';
+import NavMenu from './NavMenu';
 import Navbar from './Navbar';
+
 
 function HeaderSection() {
     return (

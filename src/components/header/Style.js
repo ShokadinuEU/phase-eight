@@ -252,7 +252,7 @@ const useStyles = makeStyles(theme => ({
   sectionMobile: {
     display: 'none',
     [theme.breakpoints.up('md')]: {
-      display: 'none',
+      // display: 'none',
     },
   },
   root: {

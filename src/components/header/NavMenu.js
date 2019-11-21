@@ -5,10 +5,11 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
 const useStyles = makeStyles(theme => ({
-  root: {
+  mainMenu: {
     flexGrow: 1,
     padding: '0 0.1em',
     margin: '0 0.1em',
+    paddingTop: '5.5em',
     [theme.breakpoints.down('sm')]: {
       display: 'none'
     },
@@ -21,7 +22,7 @@ const useStyles = makeStyles(theme => ({
     borderTop: '1px solid #ccc',
     '& > div': {
       width: '40%',
-      maxWidth: '50%',
+      maxWidth: '70%',
       backgroundColor: '#fff',
       color: '#000',
     },
@@ -31,7 +32,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: '.725rem',
     fontWeight: '700',
     minWidth: '98px',
-    maxWidth: '127px',
+    maxWidth: '175px',
     lineHeight: '1.2',
     padding: '0 0.6em',
     margin: '0 0.5em',
@@ -40,7 +41,7 @@ const useStyles = makeStyles(theme => ({
     '&:hover': {
       borderBottom: '2px solid #8e7143',
       minWidth: '98px',
-      maxWidth: '127px',
+      maxWidth: '175px',
     },
     '&:first-child': {
       marginRight: '0.2em',
@@ -75,7 +76,7 @@ export default function NavMenu() {
   }
 
   return (
-    <Paper className={classes.root}>
+    <Paper className={classes.mainMenu}>
       <Tabs
         className={classes.setMenu}
         value={value}
@@ -84,8 +85,10 @@ export default function NavMenu() {
         textColor="inherit"
         centered
       >
+        <Tab className={classes.menuItem} label="Christmas" />
         <Tab className={classes.menuItem} label="What's New" />
         <Tab className={classes.menuItem} label="All Clothing" />
+        <Tab className={classes.menuItem} label="Sues & Accesories" />
         <Tab className={classes.menuItem} label="Plus Size" />
         <Tab className={classes.menuItem} label="Wedding" />
         <Tab className={classes.menuItem} label="Inspire" />
