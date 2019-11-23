@@ -25,6 +25,7 @@ export default function Contact() {
       }
     },
     contactSectionDesktop: {
+      display: "contents",
       [theme.breakpoints.down("sm")]: {
         display: "none"
       }
@@ -98,7 +99,10 @@ export default function Contact() {
       fontSize: "1.7em"
     },
     contactSectionMobile: {
-      display: "content"
+      display: "content",
+      [theme.breakpoints.up("sm")]: {
+        display: "none"
+      }
     },
     contactSectionMobileHeader: {
       backgroundColor: "#8e7143",
