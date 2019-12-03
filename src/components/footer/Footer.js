@@ -1,7 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import Icon from '@material-ui/core/Icon';
-import { loadCSS } from 'fg-loadcss';
+import Icon from '@material-ui/core/Icon'
 
 
 export default function Footer() {
@@ -66,7 +65,20 @@ export default function Footer() {
       padding: '2.5em',
       cursor: 'default',
       [theme.breakpoints.down("sm")]: {
-        display: "block"
+        display: "block",
+        width: '90%',
+      },
+    },
+    footerHeader: {
+      [theme.breakpoints.up("sm")]: {
+        "& span": {
+          display: "none"
+        }
+      },
+      [theme.breakpoints.down("sm")]: {
+        display: "flex",
+        justifyContent: "space-between",
+        paddingRight: "1.5em",
       },
     },
     footerContent: {
@@ -78,7 +90,11 @@ export default function Footer() {
         '&:hover': {
           cursor: 'pointer',
         }
-      }
+      },
+      [theme.breakpoints.down("sm")]: {
+        borderBottom: "1px solid #ccc",
+        padding: "1em 0"
+      },
     },
     linksHeader: {
       fontSize: '.875rem',
@@ -86,20 +102,20 @@ export default function Footer() {
       fontWeight: '700',
       textTransform: 'uppercase',
       marginBottom: '1.2em',
+      [theme.breakpoints.down("sm")]: {
+
+      },
     },
     linksList: {
       paddingBottom: '0.25rem',
       fontSize: '.875rem',
       letterSpacing: '.09375rem',
+      [theme.breakpoints.down("sm")]: {
+        display: "none",
+      },
     },
   }))
 
-  React.useEffect(() => {
-    loadCSS(
-      'https://use.fontawesome.com/releases/v5.1.0/css/all.css',
-      document.querySelector('#font-awesome-css'),
-    );
-  }, []);
   const classes = useStyles();
   return (
     <div className={classes.footerMain}>
@@ -107,11 +123,11 @@ export default function Footer() {
         {
           content.map((item, i) =>
             <div className={classes.footerContent} key={i}>
-              <div>
+              <div className={classes.footerHeader}>
                 <h4 className={classes.linksHeader}>
                   {item.link_header}
                 </h4>
-                <span><Icon className="fa fa-chevron-up" /></span>
+                <span><Icon>expand-less</Icon></span>
               </div>
               <ul className={classes.linksList}>
                 <li>{item.link_zero}</li>
