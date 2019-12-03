@@ -1,5 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
+import Icon from '@material-ui/core/Icon';
+import { loadCSS } from 'fg-loadcss';
 
 
 export default function Footer() {
@@ -63,6 +65,9 @@ export default function Footer() {
       marginLeft: 'auto',
       padding: '2.5em',
       cursor: 'default',
+      [theme.breakpoints.down("sm")]: {
+        display: "block"
+      },
     },
     footerContent: {
       display: 'flex',
@@ -81,35 +86,45 @@ export default function Footer() {
       fontWeight: '700',
       textTransform: 'uppercase',
       marginBottom: '1.2em',
-    },    
+    },
     linksList: {
       paddingBottom: '0.25rem',
       fontSize: '.875rem',
       letterSpacing: '.09375rem',
-    },    
+    },
   }))
+
+  React.useEffect(() => {
+    loadCSS(
+      'https://use.fontawesome.com/releases/v5.1.0/css/all.css',
+      document.querySelector('#font-awesome-css'),
+    );
+  }, []);
   const classes = useStyles();
   return (
     <div className={classes.footerMain}>
       <div className={classes.footerContainer}>
-          {
-            content.map((item,i) => 
-              <div className={classes.footerContent} key={i}>
+        {
+          content.map((item, i) =>
+            <div className={classes.footerContent} key={i}>
+              <div>
                 <h4 className={classes.linksHeader}>
                   {item.link_header}
                 </h4>
-                <ul className={classes.linksList}>
-                  <li>{item.link_zero}</li>
-                  <li>{item.link_one}</li>
-                  <li>{item.link_two}</li>
-                  <li>{item.link_three}</li>
-                  <li>{item.link_four}</li>
-                  <li>{item.link_five}</li>
-                  <li>{item.link_six}</li>
-                </ul>
+                <span><Icon className="fa fa-chevron-up" /></span>
               </div>
-            ) 
-          }
+              <ul className={classes.linksList}>
+                <li>{item.link_zero}</li>
+                <li>{item.link_one}</li>
+                <li>{item.link_two}</li>
+                <li>{item.link_three}</li>
+                <li>{item.link_four}</li>
+                <li>{item.link_five}</li>
+                <li>{item.link_six}</li>
+              </ul>
+            </div>
+          )
+        }
       </div>
     </div>
   )
